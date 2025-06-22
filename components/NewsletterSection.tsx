@@ -28,7 +28,7 @@ const NewsletterSection = React.forwardRef<HTMLElement>((_, ref) => {
           />
           <button
             type="submit"
-            className="bg-[#D3BD9E] hover:bg-[#D3BD9E]/80 px-6 py-3 text-black font-semibold rounded-2xl font-medium transition"
+            className="bg-[#D3BD9E] hover:bg-[#D3BD9E]/80 px-6 py-3 text-black  rounded-2xl font-medium transition"
           >
             Subscribe
           </button>
