@@ -9,6 +9,7 @@ import {
   FaRulerCombined,
   FaArrowRight,
 } from "react-icons/fa";
+import PropertyModal from "./PropertyModal";
 
 const propertyData = [
   {
@@ -16,103 +17,118 @@ const propertyData = [
     title: "The Heritage Loft",
     location: "124 Maple Street, Boston",
     price: "$450,000",
-    tag: "Historical Landmark",
     beds: 3,
     baths: 2,
     area: "1,850 sq.ft",
+    built: 1920,
     image: "/image-09.svg",
     description:
       "A beautifully restored loft with original hardwood floors and exposed brick walls.",
+    tag: "Featured",
+    gallery: ["/image-09.svg"],
   },
   {
     id: 2,
     title: "Classic Brownstone",
     location: "78 Oak Avenue, New York",
-    price: "$725,000",
-    tag: "Penthouse",
+    price: "$650,000",
     beds: 4,
     baths: 3,
     area: "2,400 sq.ft",
+    built: 1910,
     image: "/image-10.svg",
     description:
       "Stunning brownstone with original details, fireplace, and private garden.",
+    tag: "New",
+    gallery: ["/image-10.svg"],
   },
   {
     id: 3,
     title: "Cozy Vintage Cottage",
     location: "32 Pine Road, Chicago",
-    price: "$325,000",
-    tag: "Equestrian Facility",
+    price: "$320,000",
     beds: 2,
     baths: 1,
     area: "1,200 sq.ft",
+    built: 1945,
     image: "/image-11.svg",
     description:
       "Charming cottage with vintage details, updated kitchen, and large backyard.",
+    tag: "Popular",
+    gallery: ["/image-11.svg"],
   },
   {
     id: 4,
     title: "Cozy Vintage Cottage",
     location: "32 Pine Road, Chicago",
-    price: "$325,000",
-    tag: "Equestrian Facility",
+    price: "$320,000",
     beds: 2,
     baths: 1,
     area: "1,200 sq.ft",
+    built: 1945,
     image: "/image-11.svg",
     description:
       "Charming cottage with vintage details, updated kitchen, and large backyard.",
+    tag: "Popular",
+    gallery: ["/image-11.svg"],
   },
   {
     id: 5,
     title: "Cozy Vintage Cottage",
     location: "32 Pine Road, Chicago",
-    price: "$325,000",
-    tag: "Equestrian Facility",
+    price: "$320,000",
     beds: 2,
     baths: 1,
     area: "1,200 sq.ft",
+    built: 1945,
     image: "/image-11.svg",
     description:
       "Charming cottage with vintage details, updated kitchen, and large backyard.",
+    tag: "Popular",
+    gallery: ["/image-11.svg"],
   },
   {
     id: 6,
     title: "Cozy Vintage Cottage",
     location: "32 Pine Road, Chicago",
-    price: "$325,000",
-    tag: "Equestrian Facility",
+    price: "$320,000",
     beds: 2,
     baths: 1,
     area: "1,200 sq.ft",
+    built: 1945,
     image: "/image-11.svg",
     description:
       "Charming cottage with vintage details, updated kitchen, and large backyard.",
+    tag: "Popular",
+    gallery: ["/image-11.svg"],
   },
 
   ...Array.from({ length: 9 }, (_, i) => ({
-    id: i + 4,
-    title: `Vintage Home #${i + 4}`,
-    location: `Location ${i + 4}`,
+    id: i + 7,
+    title: `Vintage Home #${i + 7}`,
+    location: `Location ${i + 7}`,
     price: `$${(300000 + i * 25000).toLocaleString()}`,
-    tag: [
-      "Historic Landmark",
-      "Penthouse",
-      "Equestrian Facility",
-      "Garden Estate",
-    ][i % 4],
     beds: 2 + (i % 3),
     baths: 1 + (i % 2),
     area: `${1200 + i * 100} sq.ft`,
+    built: 1900 + i,
     image: `https://source.unsplash.com/random/800x600?vintage+house+${i}`,
     description:
       "Beautiful vintage property with a unique story and timeless design.",
+    tag: "Vintage",
+    gallery: [
+      `https://source.unsplash.com/random/800x600?vintage+house+${i}`,
+      `https://source.unsplash.com/random/800x600?vintage+interior+${i}`,
+    ],
   })),
 ];
 
 const PropertiesSection = React.forwardRef<HTMLElement>((_, ref) => {
   const [visibleCount, setVisibleCount] = useState(3);
   const visibleProperties = propertyData.slice(0, visibleCount);
+  const [selectedProp, setSelectedProp] = useState<
+    (typeof propertyData)[0] | null
+  >(null);
 
   const loadMore = () => {
     setVisibleCount((prev) => Math.min(prev + 3, propertyData.length));
@@ -146,12 +162,6 @@ const PropertiesSection = React.forwardRef<HTMLElement>((_, ref) => {
                   alt={property.title}
                   className="w-full h-64 object-cover"
                 />
-                <div className="absolute top-4 right-4 bg-amber-800 text-white px-3 py-1 rounded-full text-sm font-medium">
-                  {property.tag}
-                </div>
-                <div className="absolute bottom-4 left-4 bg-white text-[#9d6b53] px-3 py-1 rounded-full text-sm font-medium">
-                  {property.price}
-                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{property.title}</h3>
@@ -174,26 +184,24 @@ const PropertiesSection = React.forwardRef<HTMLElement>((_, ref) => {
                   </span>
                 </div>
                 <p className="text-gray-700 mb-4">{property.description}</p>
-                <Link href={`/property/${property.id}`}>
-                  <button className="w-full bg-amber-800 hover:bg-amber-900 text-white py-2 rounded transition">
-                    View Details
-                  </button>
-                </Link>
+
+                <button
+                  className="w-full bg-amber-800 hover:bg-amber-900 text-white py-2 rounded transition"
+                  onClick={() => setSelectedProp(property)}
+                >
+                  View Details
+                </button>
               </div>
             </div>
           ))}
         </div>
 
-        {visibleCount < propertyData.length && (
-          <div className="text-center mt-12">
-            <button
-              onClick={loadMore}
-              className="bg-[#9d6b53] hover:bg-amber-900 text-white px-6 py-3 rounded font-medium transition"
-            >
-              Browse More Properties{" "}
-              <FaArrowRight className="inline-block ml-2" />
-            </button>
-          </div>
+        {/* Load more button logic */}
+        {selectedProp && (
+          <PropertyModal
+            property={selectedProp}
+            onClose={() => setSelectedProp(null)}
+          />
         )}
       </div>
     </section>

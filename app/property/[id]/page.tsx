@@ -1,7 +1,7 @@
 "use client";
 
-
-import PropertyDetails from '@/components/PropertyDetails';
+import Navbar from "@/components/Navbar";
+import PropertyDetails from "@/components/PropertyDetails";
 
 interface Props {
   params: {
@@ -9,6 +9,11 @@ interface Props {
   };
 }
 
-export default function PropertyPage({ params }: Props) {
-  return <PropertyDetails id={params.id} />;
+export default async function PropertyPage({ params }: Props) {
+  return (
+    <>
+    <Navbar/>
+      <PropertyDetails id={params.id} />;
+    </>
+  );
 }
