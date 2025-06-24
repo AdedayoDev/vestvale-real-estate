@@ -16,9 +16,7 @@ const NewsletterSection = React.forwardRef<HTMLElement>((_, ref) => {
       >
         
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Join Subscribe to our newsletter to get updates on our latest offers</h2>
-        <p className="text-xl mb-6 max-w-2xl mx-auto">
-         Get 20% off your first purchase when you subscribe to our newsletter!
-        </p>
+        
 
         <form className="max-w-md mx-auto flex gap-4">
           <input

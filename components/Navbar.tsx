@@ -13,7 +13,8 @@ type SectionKey =
   | "products"
   | "services"
   | "testimonials"
-  | "contact";
+  | "contact"
+  | "interior-decor"
 
 interface NavbarProps {
   onNavClick?: (section: SectionKey) => void;
@@ -24,6 +25,7 @@ const navLinks: { label: string; section: SectionKey; href: string }[] = [
   { label: "About Us", section: "about", href: "#about" },
   { label: "Our Properties", section: "products", href: "#products" },
   { label: "Services", section: "services", href: "#services" },
+  { label: "Interior Decor", section: "interior-decor", href: "#services" },
   { label: "Virtual Tour", section: "testimonials", href: "#testimonials" },
   { label: "Contact", section: "contact", href: "#contact" },
 ];
@@ -60,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavClick }) => {
                   e.preventDefault();
                   onNavClick?.(link.section);
                 }}
-                className="text-[#9d6b53] font-medium hover:text-amber-900 transition"
+                className="text-[#141414] font-medium hover:text-amber-900 transition"
               >
                 {link.label}
               </Link>

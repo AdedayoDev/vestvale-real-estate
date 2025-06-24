@@ -5,56 +5,56 @@ import React from "react";
 const serviceItem = [
   {
     id: 1,
-    image: "/Building.png",
+    image: "/house-icon.svg",
     heading: "Luxury Real Estate Development",
     paragraph:
       "We design and build premium duplexes and estate homes with custom finishes, modern amenities, and timeless exteriors.",
   },
   {
     id: 2,
-    image: "/Building.png",
+    image: "/crane-icon.svg",
     heading: "Property Management",
     paragraph:
       "Comprehensive property management services to ensure your investment is well maintained and profitable.",
   },
   {
     id: 3,
-    image: "/Building.png",
+    image: "/window-icon.svg",
     heading: "Interior Design",
     paragraph:
       "Transform your space with our expert interior design and furnishing solutions tailored to your taste.",
   },
   {
     id: 4,
-    image: "/Building.png",
+    image: "/landscape-icon.svg",
     heading: "Consultancy",
     paragraph:
       "Get expert advice on real estate investment, market trends, and property acquisition.",
   },
   {
     id: 5,
-    image: "/Building.png",
+    image: "/smart-home-icon.svg",
     heading: "Renovation & Restoration",
     paragraph:
       "We restore and renovate properties to preserve their charm while adding modern comfort.",
   },
   {
     id: 6,
-    image: "/Building.png",
+    image: "/construction-icon.svg",
     heading: "Legal Advisory",
     paragraph:
       "Our legal team ensures all your real estate transactions are secure and compliant.",
   },
   {
     id: 7,
-    image: "/Building.png",
+    image: "/chair-icon.svg",
     heading: "Facility Management",
     paragraph:
       "We provide ongoing facility management for residential and commercial properties.",
   },
   {
     id: 8,
-    image: "/Building.png",
+    image: "/property-icon.svg",
     heading: "Custom Builds",
     paragraph:
       "Bring your dream home to life with our custom building solutions.",

@@ -192,7 +192,7 @@ const PropertiesSection = React.forwardRef<HTMLElement>((_, ref) => {
                 {/* <p className="text-gray-700 mb-4">{property.description}</p> */}
 
                 <button
-                  className="w-full bg-[#D3BD9E] hover:bg-[#D3BD9E]/70 text-black font-semibold hover:text-black py-2 rounded transition"
+                  className="w-full bg-[#D3BD9E] hover:bg-[#c7b091] text-black font-semibold hover:text-black py-2 rounded transition"
                   onClick={() => setSelectedProp(property)}
                 >
                   View Details
@@ -206,9 +206,9 @@ const PropertiesSection = React.forwardRef<HTMLElement>((_, ref) => {
           <div className="text-center mt-12">
             <button
               onClick={loadMore}
-              className="bg-[#9d6b53] hover:bg-amber-900 text-white px-6 py-3 rounded font-medium transition"
+              className="bg-[#D3BD9E] hover:bg-[#c7b091] text-black font-semibold px-6 py-3 rounded transition"
             >
-              Browse More Properties{" "}
+             See all{" "}
               <FaArrowRight className="inline-block ml-2" />
             </button>
           </div>
