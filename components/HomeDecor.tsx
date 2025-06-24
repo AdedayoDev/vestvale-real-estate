@@ -12,37 +12,41 @@ const HomeDecor = React.forwardRef<
       id: 1,
       tag: "All Items",
       cotent: [
-        {
+        { id: 1,
           image: "/image-01.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
         },
-        {
+        { 
+          id: 2,
           image: "/image-06.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
         },
         {
+          id: 3,
           image: "/image-08.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
         },
-        {
+        { id: 4,
           image: "/image-05.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
         },
-        {
+        { 
+          id: 5,
           image: "/image-05.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
         },
-        {
+        { id: 6,
           image: "/image-01.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
         },
-        {
+        { 
+          id: 7,
           image: "/image-01.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
@@ -54,21 +58,28 @@ const HomeDecor = React.forwardRef<
       tag: "Italy",
       cotent: [
         {
+
+          id: 1,
           image: "image-05.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
         },
         {
+
+          id: 2,
           image: "/image-05.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
         },
         {
+
+          id: 3,
           image: "/image-05.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
         },
         {
+          id: 4,
           image: "/image-01.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
@@ -80,21 +91,25 @@ const HomeDecor = React.forwardRef<
       tag: "Russia",
       cotent: [
         {
+          id: 1,
           image: "image-05.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
         },
         {
+          id: 2,
           image: "/image-05.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
         },
         {
+          id: 3,
           image: "/image-05.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
         },
         {
+          id: 4,
           image: "/image-05.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
@@ -106,21 +121,25 @@ const HomeDecor = React.forwardRef<
       tag: "Morroco",
       cotent: [
         {
+          id: 1,
           image: "image-05.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
         },
         {
+          id: 2,
           image: "/image-05.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
         },
         {
+          id: 3,
           image: "/image-05.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
         },
         {
+          id: 4,
           image: "/image-05.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
@@ -132,21 +151,26 @@ const HomeDecor = React.forwardRef<
       tag: "China",
       cotent: [
         {
+          id: 1,
           image: "image-05.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
         },
         {
+          id: 2,
           image: "/image-05.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
         },
         {
+
+          id: 3,
           image: "/image-05.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
         },
         {
+          id: 4,
           image: "/image-05.svg",
           title: "Vintage Edison Bulb",
           desc: "Set of 3 - Warm bulb",
