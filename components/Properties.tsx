@@ -14,46 +14,43 @@ import PropertyModal from "./PropertyModal";
 const propertyData = [
   {
     id: 1,
-    title: "The Heritage Loft",
-    location: "124 Maple Street, Boston",
-    price: "$450,000",
+    title: "Golden Castle Estate, (3 Bedroom Apartment)",
+    location: "15B Maple Street, Maitama Abuja.",
     beds: 3,
-    baths: 2,
-    area: "1,850 sq.ft",
+    baths: 3,
+    area: "Furnished",
     built: 1920,
     image: "/image-09.svg",
     description:
-      "A beautifully restored loft with original hardwood floors and exposed brick walls.",
+      "This magnificent Grade II listed country house sits on 50 acres of prime Cotswold countryside. Originally built as the country seat of the Blackwood family in 1848, the estate combines Georgian architectural elegance with modern amenities and working equestrian facilities.The principal residence features stunning original plasterwork, multiple marble fireplaces, a grand staircase, and period detailing throughout. Recent sympathetic renovations have added modern luxuries while preserving the home's historic character.The estate includes stables, a pool house, walled kitchen gardens, vineyards producing about 800 bottles per year, and numerous outbuildings with potential for conversion (subject to planning permission).",
     tag: "Featured",
     gallery: ["/image-09.svg"],
   },
   {
     id: 2,
-    title: "Classic Brownstone",
-    location: "78 Oak Avenue, New York",
-    price: "$650,000",
-    beds: 4,
+    title: "3 Bedroom Luxury Apartment",
+    location: "Abuja",
+    beds: 3,
     baths: 3,
-    area: "2,400 sq.ft",
+    area: "Furnished",
     built: 1910,
     image: "/image-10.svg",
     description:
-      "Stunning brownstone with original details, fireplace, and private garden.",
+      "This magnificent Grade II listed country house sits on 50 acres of prime Cotswold countryside. Originally built as the country seat of the Blackwood family in 1848, the estate combines Georgian architectural elegance with modern amenities and working equestrian facilities.The principal residence features stunning original plasterwork, multiple marble fireplaces, a grand staircase, and period detailing throughout. Recent sympathetic renovations have added modern luxuries while preserving the home's historic character.The estate includes stables, a pool house, walled kitchen gardens, vineyards producing about 800 bottles per year, and numerous outbuildings with potential for conversion (subject to planning permission).",
     tag: "New",
     gallery: ["/image-10.svg"],
   },
   {
     id: 3,
-    title: "Cozy Vintage Cottage",
-    location: "32 Pine Road, Chicago",
-    price: "$320,000",
-    beds: 2,
-    baths: 1,
-    area: "1,200 sq.ft",
+    title: "3 Bedroom Luxury Apartment",
+    location: "Abuja",
+    beds: 3,
+    baths: 3,
+    area: "Furnished",
     built: 1945,
     image: "/image-11.svg",
     description:
-      "Charming cottage with vintage details, updated kitchen, and large backyard.",
+      "This magnificent Grade II listed country house sits on 50 acres of prime Cotswold countryside. Originally built as the country seat of the Blackwood family in 1848, the estate combines Georgian architectural elegance with modern amenities and working equestrian facilities.",
     tag: "Popular",
     gallery: ["/image-11.svg"],
   },
@@ -61,7 +58,6 @@ const propertyData = [
     id: 4,
     title: "Cozy Vintage Cottage",
     location: "32 Pine Road, Chicago",
-    price: "$320,000",
     beds: 2,
     baths: 1,
     area: "1,200 sq.ft",
@@ -76,7 +72,7 @@ const propertyData = [
     id: 5,
     title: "Cozy Vintage Cottage",
     location: "32 Pine Road, Chicago",
-    price: "$320,000",
+
     beds: 2,
     baths: 1,
     area: "1,200 sq.ft",
@@ -91,14 +87,14 @@ const propertyData = [
     id: 6,
     title: "Cozy Vintage Cottage",
     location: "32 Pine Road, Chicago",
-    price: "$320,000",
+
     beds: 2,
     baths: 1,
-    area: "1,200 sq.ft",
+    area: "Furnished",
     built: 1945,
     image: "/image-11.svg",
     description:
-      "Charming cottage with vintage details, updated kitchen, and large backyard.",
+      "This magnificent Grade II listed country house sits on 50 acres of prime Cotswold countryside. Originally built as the country seat of the Blackwood family in 1848, the estate combines Georgian architectural elegance with modern amenities and working equestrian facilities. The principal residence features stunning original plasterwork, multiple marble fireplaces, a grand staircase, and period detailing throughout. Recent sympathetic renovations have added modern luxuries while preserving the home's historic character.The estate includes stables, a pool house, walled kitchen gardens, vineyards producing about 800 bottles per year, and numerous outbuildings with potential for conversion (subject to planning permission).",
     tag: "Popular",
     gallery: ["/image-11.svg"],
   },
@@ -107,7 +103,6 @@ const propertyData = [
     id: i + 7,
     title: `Vintage Home #${i + 7}`,
     location: `Location ${i + 7}`,
-    price: `$${(300000 + i * 25000).toLocaleString()}`,
     beds: 2 + (i % 3),
     baths: 1 + (i % 2),
     area: `${1200 + i * 100} sq.ft`,
@@ -134,6 +129,17 @@ const PropertiesSection = React.forwardRef<HTMLElement>((_, ref) => {
     setVisibleCount((prev) => Math.min(prev + 3, propertyData.length));
   };
 
+  const handleContactAdvisor = (property: (typeof propertyData)[0]) => {
+    setSelectedProp(null); // Close modal first
+
+    setTimeout(() => {
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 300); // Small delay to let modal visually disappear
+  };
+
   return (
     <section
       ref={ref}
@@ -154,7 +160,7 @@ const PropertiesSection = React.forwardRef<HTMLElement>((_, ref) => {
           {visibleProperties.map((property) => (
             <div
               key={property.id}
-              className="bg-white rounded-lg overflow-hidden shadow-md transition duration-300"
+              className="bg-black/10 border border-white rounded-lg overflow-hidden shadow-md transition duration-300"
             >
               <div className="relative">
                 <img
@@ -165,28 +171,28 @@ const PropertiesSection = React.forwardRef<HTMLElement>((_, ref) => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{property.title}</h3>
-                <p className="text-gray-600 mb-4 flex items-center">
-                  <FaMapMarkerAlt className="text-amber-800 mr-2" />{" "}
+                <p className="text-white/90 mb-4 flex items-center">
+                  <FaMapMarkerAlt className="text-white/90 mr-2" />{" "}
                   {property.location}
                 </p>
-                <div className="flex justify-between text-sm text-gray-600 mb-4">
+                <div className="flex justify-between text-sm text-white/90 mb-4">
                   <span>
-                    <FaBed className="inline-block text-amber-800 mr-1" />{" "}
+                    <FaBed className="inline-block text-white/90 mr-1" />{" "}
                     {property.beds} Beds
                   </span>
                   <span>
-                    <FaBath className="inline-block text-amber-800 mr-1" />{" "}
+                    <FaBath className="inline-block text-white/90 mr-1" />{" "}
                     {property.baths} Baths
                   </span>
                   <span>
-                    <FaRulerCombined className="inline-block text-amber-800 mr-1" />{" "}
+                    <FaRulerCombined className="inline-block text-white/90 mr-1" />{" "}
                     {property.area}
                   </span>
                 </div>
-                <p className="text-gray-700 mb-4">{property.description}</p>
+                {/* <p className="text-gray-700 mb-4">{property.description}</p> */}
 
                 <button
-                  className="w-full bg-amber-800 hover:bg-amber-900 text-white py-2 rounded transition"
+                  className="w-full bg-[#D3BD9E] hover:bg-[#D3BD9E]/70 text-black font-semibold hover:text-black py-2 rounded transition"
                   onClick={() => setSelectedProp(property)}
                 >
                   View Details
@@ -196,11 +202,24 @@ const PropertiesSection = React.forwardRef<HTMLElement>((_, ref) => {
           ))}
         </div>
 
-        {/* Load more button logic */}
+        {visibleCount < propertyData.length && (
+          <div className="text-center mt-12">
+            <button
+              onClick={loadMore}
+              className="bg-[#9d6b53] hover:bg-amber-900 text-white px-6 py-3 rounded font-medium transition"
+            >
+              Browse More Properties{" "}
+              <FaArrowRight className="inline-block ml-2" />
+            </button>
+          </div>
+        )}
+
+        {/* ✅ Show Modal if a property is selected */}
         {selectedProp && (
           <PropertyModal
             property={selectedProp}
             onClose={() => setSelectedProp(null)}
+            onContactAdvisor={handleContactAdvisor}
           />
         )}
       </div>

@@ -68,7 +68,7 @@ const PropertyDetails = (props: PropertyDetailsProps) => {
         className="relative h-[60vh] bg-cover bg-center"
         style={{ backgroundImage: `url(${property.image})` }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div className="absolute inset-0 bg-black bg-opacity50"></div>
         <div className="absolute bottom-8 left-8">
           <h1 className="text-4xl font-bold">{property.title}</h1>
         </div>

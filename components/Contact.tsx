@@ -11,6 +11,9 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
+
+
+
 const ContactSection = React.forwardRef<HTMLElement>((_, ref) => {
   return (
     <section ref={ref} id="contact" className="py-20 bg-[#17120F]">

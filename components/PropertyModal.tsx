@@ -1,14 +1,20 @@
 "use client";
 
 import React from "react";
-import { FaMapMarkerAlt, FaBed, FaBath, FaRulerCombined, FaCheck, FaTimes } from "react-icons/fa";
+import {
+  FaMapMarkerAlt,
+  FaBed,
+  FaBath,
+  FaRulerCombined,
+  FaCheck,
+  FaTimes,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 
 type Property = {
   id: number;
   title: string;
   location: string;
-  price: string;
   tag: string;
   beds: number;
   baths: number;
@@ -22,12 +28,25 @@ type Property = {
 interface PropertyModalProps {
   property: Property;
   onClose: () => void;
+  onContactAdvisor: (property: Property) => void;
 }
 
-const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose }) => {
+const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose,  onContactAdvisor, }) => {
+
+
+   const handleContactClick = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    event.stopPropagation();
+    onContactAdvisor(property); // Will scroll and close via parent
+  };
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 p-4 overflow-auto">
-      <div className="relative bg-[#17120F] text-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-lg">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-md  bg-opacity-60 p-4 overflow-auto"
+      
+    >
+      <div className="relative bg-[#f7e9d5]  text-black rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-lg">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -52,7 +71,7 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose }) => {
         <div className="container mx-auto px-6 py-8 grid md:grid-cols-3 gap-6">
           {/* Info Column */}
           <div className="md:col-span-2 space-y-6">
-            <div className="flex items-center gap-2 text-white/80 text-sm">
+            <div className="flex items-center gap-2 text-balck  text-sm">
               <FaMapMarkerAlt className="text-amber-600" />
               <span>{property.location}</span>
             </div>
@@ -74,30 +93,31 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose }) => {
 
             <div>
               <h2 className="text-xl font-semibold mb-2">Description</h2>
-              <p className="text-white/80 whitespace-pre-line">{property.description}</p>
+              <p className="text-black whitespace-pre-line">
+                {property.description}
+              </p>
             </div>
 
             <div>
               <h2 className="text-xl font-semibold mb-2">Features</h2>
               <ul className="space-y-2">
                 <li className="flex items-center gap-2">
-                  <FaCheck className="text-green-400" /> Historic architecture
+                  <FaCheck className="text-black" /> Historic architecture
                 </li>
                 <li className="flex items-center gap-2">
-                  <FaCheck className="text-green-400" /> Private garden & vineyards
+                  <FaCheck className="text-black" /> Private garden &
+                  vineyards
                 </li>
                 <li className="flex items-center gap-2">
-                  <FaCheck className="text-green-400" /> Expansion potential
+                  <FaCheck className="text-black" /> Expansion potential
                 </li>
               </ul>
             </div>
           </div>
 
           {/* Price & Contact */}
-          <aside className="bg-white text-black p-6 rounded-lg shadow">
-            <h2 className="text-2xl font-bold mb-4">{property.price}</h2>
-            <p className="mb-4">Monthly Maintenance: $1,200</p>
-            <button className="w-full bg-amber-700 hover:bg-amber-900 text-white py-2 rounded">
+          <aside className="h-24 bg-white text-black p-6 rounded-lg shadow">
+            <button className="w-full bg-amber-700 hover:bg-amber-900 text-white py-2 rounded"  onClick={handleContactClick}>
               Contact Advisor
             </button>
           </aside>
@@ -126,3 +146,7 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose }) => {
 };
 
 export default PropertyModal;
+function onContactAdvisor(property: Property) {
+  throw new Error("Function not implemented.");
+}
+
