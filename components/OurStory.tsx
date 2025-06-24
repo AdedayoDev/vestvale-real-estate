@@ -8,10 +8,10 @@ const OurStory = React.forwardRef<HTMLElement>((_, ref) => {
     <section
       ref={ref}
       id="about"
-      className=" py-16 bg-[#17120F] text-white"
+      className=" md:py-16 bg-[#17120F] text-white"
     >
       <div className="container  mx-auto px-4">
-        <div className="flex flex-col md:gap-20 lg:flex-row items-center">
+        <div className="flex flex-col gap-20 lg:flex-row items-center">
           {/* Right Text */}
           <div className="lg:w-1/2 h-auto">
             <h3 className="text-3xl md:text-4xl font-bold  mb-4">About us</h3>
@@ -29,27 +29,7 @@ const OurStory = React.forwardRef<HTMLElement>((_, ref) => {
               intelligent space planning-fused with global design inspiration
               from Russia, China, Morocco, and Italy.
             </p>
-            {/* <ul className="space-y-3 mb-6">
-              <li className="flex items-start">
-                <FaCheck className="text-amber-800 mt-1 mr-3" />
-                <span className="text-gray-700">
-                  Over 200 historic properties restored and sold
-                </span>
-              </li>
-              <li className="flex items-start">
-                <FaCheck className="text-amber-800 mt-1 mr-3" />
-                <span className="text-gray-700">
-                  Original craftsmen workshops in England and France
-                </span>
-              </li>
-              <li className="flex items-start">
-                <FaCheck className="text-amber-800 mt-1 mr-3" />
-                <span className="text-gray-700">
-                  Recipient of the Royal Institute of British Architects
-                  Conservation Award
-                </span>
-              </li>
-            </ul> */}
+        
             <button className="bg-[#D3BD9E] hover:bg-amber-900 text-black px-6 py-3 rounded font-medium transition">
               Read more
             </button>
