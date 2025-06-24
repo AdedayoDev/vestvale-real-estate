@@ -8,7 +8,7 @@ const OurStory = React.forwardRef<HTMLElement>((_, ref) => {
     <section
       ref={ref}
       id="about"
-      className=" md:py-16 bg-[#17120F] text-white"
+      className="py-10 md:py-16 bg-[#17120F] text-white"
     >
       <div className="container  mx-auto px-4">
         <div className="flex flex-col gap-20 lg:flex-row items-center">
