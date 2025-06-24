@@ -188,8 +188,8 @@ const HomeDecor = React.forwardRef<
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-center justify-center mb-10">
             {decorItems
               .find((item) => item.id === active)
-              ?.cotent.map((content) => (
-                <div className="p-4 rounded-lg shadow-md bg-[#17120F]">
+              ?.cotent.map((content, index) => (
+                <div key={index} className="p-4 rounded-lg shadow-md bg-[#17120F]">
                   <div className="mb-4 w-full">
                     <div className="w-full h-48 mx-auto overflow-hidden rounded">
                       <img
