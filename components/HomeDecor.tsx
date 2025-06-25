@@ -183,7 +183,7 @@ const HomeDecor = React.forwardRef<
   
 
   return (
-    <section ref={ref}>
+    <section ref={ref} id="homedecor" >
       <div className="py-4">
         <h2 className="font-medium text-5xl text-white text-center">Interior Decors</h2>
         <p className="font-normal text-lg text-center text-white">

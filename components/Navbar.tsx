@@ -14,7 +14,7 @@ type SectionKey =
   | "services"
   | "testimonials"
   | "contact"
-  | "interior-decor"
+  | "interior-decor";
 
 interface NavbarProps {
   onNavClick?: (section: SectionKey) => void;
@@ -45,9 +45,8 @@ const Navbar: React.FC<NavbarProps> = ({ onNavClick }) => {
             alt="Vestvale Logo"
             width={118}
             height={52}
+            className="md:w-30 w-24"
           />
-          {/* <FaHome className="text-3xl text-[#9d6b53] mr-2" />
-          <span className="text-2xl font-bold text-[#9d6b53]">Vestvale</span> */}
         </div>
 
         {/* Desktop Links */}
@@ -62,7 +61,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavClick }) => {
                   e.preventDefault();
                   onNavClick?.(link.section);
                 }}
-                className="text-[#141414] font-medium hover:text-amber-900 transition"
+                className="text-[#141414] font-medium hover:text-[#222222] transition"
               >
                 {link.label}
               </Link>
@@ -76,7 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavClick }) => {
             .map((link) => (
               <button
                 key={link.section}
-                className="bg-[#D3BD9E] font-semibold text-xl text-[#17120f] w-44 h-14 rounded-2xl"
+                className="bg-[#D3BD9E]  font-semibold text-base md:text-xl text-[#17120f] w-26 h-10 md:w-44 md:h-14 rounded-2xl"
                 onClick={(e) => {
                   e.preventDefault();
                   onNavClick?.(link.section);
