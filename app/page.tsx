@@ -25,7 +25,9 @@ export default function HomePage() {
     testimonials: useRef<HTMLElement>(null),
     contact: useRef<HTMLElement>(null),
     properties: useRef<HTMLElement>(null),
-    service: useRef<HTMLElement>(null)
+    service: useRef<HTMLElement>(null),
+    // Add this if "interior-decor" is a valid SectionKey in Navbar.tsx
+    "interior-decor": useRef<HTMLElement>(null)
   };
 
   const scrollToSection = (key: keyof typeof sections) => {
