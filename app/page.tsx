@@ -4,7 +4,6 @@ import { useRef } from 'react';
 import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar';
 import PropertiesSection from '@/components/Properties';
-import HomeDecorSection from '@/components/Furnishing';
 import OurStory from '@/components/OurStory';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactSection from "@/components/Contact"
@@ -26,7 +25,6 @@ export default function HomePage() {
     contact: useRef<HTMLElement>(null),
     properties: useRef<HTMLElement>(null),
     service: useRef<HTMLElement>(null),
-    // Add this if "interior-decor" is a valid SectionKey in Navbar.tsx
     "interior-decor": useRef<HTMLElement>(null)
   };
 

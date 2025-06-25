@@ -14,8 +14,11 @@ type SectionKey =
   | "services"
   | "testimonials"
   | "contact"
+  | "properties"
+  | "homedecor"
+  | "service"
   | "interior-decor";
-
+  
 interface NavbarProps {
   onNavClick?: (section: SectionKey) => void;
   // ...other props...
