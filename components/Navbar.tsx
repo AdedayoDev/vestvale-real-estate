@@ -27,8 +27,8 @@ interface NavbarProps {
 const navLinks: { label: string; section: SectionKey; href: string }[] = [
   { label: "About Us", section: "about", href: "#about" },
   { label: "Our Properties", section: "products", href: "#products" },
-  { label: "Services", section: "services", href: "#services" },
   { label: "Interior Decor", section: "interior-decor", href: "#services" },
+  { label: "Services", section: "services", href: "#services" },
   { label: "Virtual Tour", section: "testimonials", href: "#testimonials" },
   { label: "Contact", section: "contact", href: "#contact" },
 ];

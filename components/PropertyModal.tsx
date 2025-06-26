@@ -38,7 +38,7 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose,  onCon
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     event.stopPropagation();
-    onContactAdvisor(property); // Will scroll and close via parent
+    onContactAdvisor(property); 
   };
 
   return (
@@ -50,7 +50,7 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose,  onCon
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-white text-2xl z-50 hover:text-amber-600"
+          className="absolute top-4 right-4 text-white text-2xl z-50 hover:text-black transition-colors duration-200"
           aria-label="Close modal"
         >
           <FaTimes />
@@ -61,9 +61,9 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose,  onCon
           className="relative h-[40vh] bg-cover bg-center rounded-t-xl"
           style={{ backgroundImage: `url(${property.image})` }}
         >
-          <div className="absolute inset-0 bg-black bg-opacity-50 rounded-t-xl"></div>
+          <div className="absolute inset-0 bg-opacity-50 rounded-t-xl"></div>
           <div className="absolute bottom-6 left-6">
-            <h1 className="text-4xl font-bold">{property.title}</h1>
+            <h1 className="text-4xl font-bold text-white">{property.title}</h1>
           </div>
         </div>
 

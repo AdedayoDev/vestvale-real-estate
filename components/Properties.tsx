@@ -62,11 +62,11 @@ const propertyData = [
     baths: 1,
     area: "1,200 sq.ft",
     built: 1945,
-    image: "/image-11.svg",
+    image: "/image-13.svg",
     description:
       "Charming cottage with vintage details, updated kitchen, and large backyard.",
     tag: "Popular",
-    gallery: ["/image-11.svg"],
+    gallery: ["/image-13.svg"],
   },
   {
     id: 5,
@@ -77,11 +77,11 @@ const propertyData = [
     baths: 1,
     area: "1,200 sq.ft",
     built: 1945,
-    image: "/image-11.svg",
+    image: "/image-04.svg",
     description:
       "Charming cottage with vintage details, updated kitchen, and large backyard.",
     tag: "Popular",
-    gallery: ["/image-11.svg"],
+    gallery: ["/image-04.svg"],
   },
   {
     id: 6,
@@ -92,17 +92,122 @@ const propertyData = [
     baths: 1,
     area: "Furnished",
     built: 1945,
-    image: "/image-11.svg",
+    image: "/image-15.svg",
     description:
       "This magnificent Grade II listed country house sits on 50 acres of prime Cotswold countryside. Originally built as the country seat of the Blackwood family in 1848, the estate combines Georgian architectural elegance with modern amenities and working equestrian facilities. The principal residence features stunning original plasterwork, multiple marble fireplaces, a grand staircase, and period detailing throughout. Recent sympathetic renovations have added modern luxuries while preserving the home's historic character.The estate includes stables, a pool house, walled kitchen gardens, vineyards producing about 800 bottles per year, and numerous outbuildings with potential for conversion (subject to planning permission).",
     tag: "Popular",
-    gallery: ["/image-11.svg"],
+    gallery: ["/image-15.svg"],
+  },
+  {
+    id: 7,
+    title: "Cozy Vintage Cottage",
+    location: "32 Pine Road, Chicago",
+
+    beds: 2,
+    baths: 1,
+    area: "Furnished",
+    built: 1945,
+    image: "/image-12.svg",
+    description:
+      "This magnificent Grade II listed country house sits on 50 acres of prime Cotswold countryside. Originally built as the country seat of the Blackwood family in 1848, the estate combines Georgian architectural elegance with modern amenities and working equestrian facilities. The principal residence features stunning original plasterwork, multiple marble fireplaces, a grand staircase, and period detailing throughout. Recent sympathetic renovations have added modern luxuries while preserving the home's historic character.The estate includes stables, a pool house, walled kitchen gardens, vineyards producing about 800 bottles per year, and numerous outbuildings with potential for conversion (subject to planning permission).",
+    tag: "Popular",
+    gallery: ["/image-12.svg"],
+  },
+  {
+    id: 8,
+    title: "Cozy Vintage Cottage",
+    location: "32 Pine Road, Chicago",
+
+    beds: 2,
+    baths: 1,
+    area: "Furnished",
+    built: 1945,
+    image: "/image-14.svg",
+    description:
+      "This magnificent Grade II listed country house sits on 50 acres of prime Cotswold countryside. Originally built as the country seat of the Blackwood family in 1848, the estate combines Georgian architectural elegance with modern amenities and working equestrian facilities. The principal residence features stunning original plasterwork, multiple marble fireplaces, a grand staircase, and period detailing throughout. Recent sympathetic renovations have added modern luxuries while preserving the home's historic character.The estate includes stables, a pool house, walled kitchen gardens, vineyards producing about 800 bottles per year, and numerous outbuildings with potential for conversion (subject to planning permission).",
+    tag: "Popular",
+    gallery: ["/image-14.svg"],
+  },
+  {
+    id: 9,
+    title: "Cozy Vintage Cottage",
+    location: "32 Pine Road, Chicago",
+
+    beds: 2,
+    baths: 1,
+    area: "Furnished",
+    built: 1945,
+    image: "/image-16.svg",
+    description:
+      "This magnificent Grade II listed country house sits on 50 acres of prime Cotswold countryside. Originally built as the country seat of the Blackwood family in 1848, the estate combines Georgian architectural elegance with modern amenities and working equestrian facilities. The principal residence features stunning original plasterwork, multiple marble fireplaces, a grand staircase, and period detailing throughout. Recent sympathetic renovations have added modern luxuries while preserving the home's historic character.The estate includes stables, a pool house, walled kitchen gardens, vineyards producing about 800 bottles per year, and numerous outbuildings with potential for conversion (subject to planning permission).",
+    tag: "Popular",
+    gallery: ["/image-16.svg"],
+  },
+  {
+    id: 10,
+    title: "Cozy Vintage Cottage",
+    location: "32 Pine Road, Chicago",
+
+    beds: 2,
+    baths: 1,
+    area: "Furnished",
+    built: 1945,
+    image: "/image-18.svg",
+    description:
+      "This magnificent Grade II listed country house sits on 50 acres of prime Cotswold countryside. Originally built as the country seat of the Blackwood family in 1848, the estate combines Georgian architectural elegance with modern amenities and working equestrian facilities. The principal residence features stunning original plasterwork, multiple marble fireplaces, a grand staircase, and period detailing throughout. Recent sympathetic renovations have added modern luxuries while preserving the home's historic character.The estate includes stables, a pool house, walled kitchen gardens, vineyards producing about 800 bottles per year, and numerous outbuildings with potential for conversion (subject to planning permission).",
+    tag: "Popular",
+    gallery: ["/image-18.svg"],
+  },
+  {
+    id: 11,
+    title: "Cozy Vintage Cottage",
+    location: "32 Pine Road, Chicago",
+
+    beds: 2,
+    baths: 1,
+    area: "Furnished",
+    built: 1945,
+    image: "/image-15.svg",
+    description:
+      "This magnificent Grade II listed country house sits on 50 acres of prime Cotswold countryside. Originally built as the country seat of the Blackwood family in 1848, the estate combines Georgian architectural elegance with modern amenities and working equestrian facilities. The principal residence features stunning original plasterwork, multiple marble fireplaces, a grand staircase, and period detailing throughout. Recent sympathetic renovations have added modern luxuries while preserving the home's historic character.The estate includes stables, a pool house, walled kitchen gardens, vineyards producing about 800 bottles per year, and numerous outbuildings with potential for conversion (subject to planning permission).",
+    tag: "Popular",
+    gallery: ["/image-15.svg"],
+  },
+  {
+    id: 12,
+    title: "Cozy Vintage Cottage",
+    location: "32 Pine Road, Chicago",
+
+    beds: 2,
+    baths: 1,
+    area: "Furnished",
+    built: 1945,
+    image: "/image-19.svg",
+    description:
+      "This magnificent Grade II listed country house sits on 50 acres of prime Cotswold countryside. Originally built as the country seat of the Blackwood family in 1848, the estate combines Georgian architectural elegance with modern amenities and working equestrian facilities. The principal residence features stunning original plasterwork, multiple marble fireplaces, a grand staircase, and period detailing throughout. Recent sympathetic renovations have added modern luxuries while preserving the home's historic character.The estate includes stables, a pool house, walled kitchen gardens, vineyards producing about 800 bottles per year, and numerous outbuildings with potential for conversion (subject to planning permission).",
+    tag: "Popular",
+    gallery: ["/image-19.svg"],
+  },
+  {
+    id: 12,
+    title: "Cozy Vintage Cottage",
+    location: "32 Pine Road, Chicago",
+
+    beds: 2,
+    baths: 1,
+    area: "Furnished",
+    built: 1945,
+    image: "/image-20.svg",
+    description:
+      "This magnificent Grade II listed country house sits on 50 acres of prime Cotswold countryside. Originally built as the country seat of the Blackwood family in 1848, the estate combines Georgian architectural elegance with modern amenities and working equestrian facilities. The principal residence features stunning original plasterwork, multiple marble fireplaces, a grand staircase, and period detailing throughout. Recent sympathetic renovations have added modern luxuries while preserving the home's historic character.The estate includes stables, a pool house, walled kitchen gardens, vineyards producing about 800 bottles per year, and numerous outbuildings with potential for conversion (subject to planning permission).",
+    tag: "Popular",
+    gallery: ["/image-20.svg"],
   },
 
   ...Array.from({ length: 9 }, (_, i) => ({
-    id: i + 7,
-    title: `Vintage Home #${i + 7}`,
-    location: `Location ${i + 7}`,
+    id: i + 8,
+    title: `Vintage Home #${i + 8}`,
+    location: `Location ${i + 8}`,
     beds: 2 + (i % 3),
     baths: 1 + (i % 2),
     area: `${1200 + i * 100} sq.ft`,
@@ -118,6 +223,8 @@ const propertyData = [
   })),
 ];
 
+const MAX_CARDS = 12;
+
 const PropertiesSection = React.forwardRef<HTMLElement>((_, ref) => {
   const [visibleCount, setVisibleCount] = useState(3);
   const visibleProperties = propertyData.slice(0, visibleCount);
@@ -126,7 +233,7 @@ const PropertiesSection = React.forwardRef<HTMLElement>((_, ref) => {
   >(null);
 
   const loadMore = () => {
-    setVisibleCount((prev) => Math.min(prev + 3, propertyData.length));
+    setVisibleCount((prev) => Math.min(prev + 3, MAX_CARDS));
   };
 
   const handleContactAdvisor = (property: (typeof propertyData)[0]) => {
@@ -202,14 +309,13 @@ const PropertiesSection = React.forwardRef<HTMLElement>((_, ref) => {
           ))}
         </div>
 
-        {visibleCount < propertyData.length && (
+        {visibleCount < Math.min(propertyData.length, MAX_CARDS) && (
           <div className="text-center mt-12">
             <button
               onClick={loadMore}
               className="bg-[#D3BD9E] hover:bg-[#c7b091] text-black font-semibold px-6 py-3 rounded transition"
             >
-             See all{" "}
-              <FaArrowRight className="inline-block ml-2" />
+              See all <FaArrowRight className="inline-block ml-2" />
             </button>
           </div>
         )}
