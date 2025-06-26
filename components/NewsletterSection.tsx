@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const NewsletterSection = React.forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} className="py-16 bg-[#9d6b53] text-white font-inter" id="newsletter" 
+    <section ref={ref} className="py-16 bg-[#9d6b53] container text-white font-inter overflow-x-hidden" id="newsletter" 
      style={{ backgroundImage: 'url(/image-07.svg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       <motion.div

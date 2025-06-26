@@ -13,7 +13,7 @@ const OurStory = React.forwardRef<HTMLElement>((_, ref) => {
     <section
       ref={ref}
       id="about"
-      className="font-inter container md:w-10/12 py-10 md:py-16 bg-[#17120F] text-white"
+      className="font-inter container md:w-10/12 py-10 md:py-16 bg-[#17120F] text-white overflow-x-hidden"
     >
       <div className="container  mx-auto px-4">
         <div className="flex flex-col gap-20 lg:flex-row ">

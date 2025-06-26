@@ -251,7 +251,7 @@ const PropertiesSection = React.forwardRef<HTMLElement>((_, ref) => {
     <section
       ref={ref}
       id="properties"
-      className=" container md:w-10/12 mx-auto py-16 bg-[#17120F] text-white font-inter"
+      className=" container md:w-10/12 mx-auto py-16 bg-[#17120F] text-white font-inter overflow-x-hidden"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
