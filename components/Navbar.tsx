@@ -39,7 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavClick }) => {
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
   return (
-    <header className="bg-white sticky top-0 z-50 shadow-md">
+    <header className="bg-white sticky top-0 z-50 shadow-md font-inter">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">

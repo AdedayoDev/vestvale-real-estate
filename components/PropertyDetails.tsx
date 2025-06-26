@@ -62,7 +62,7 @@ const PropertyDetails = (props: PropertyDetailsProps) => {
   if (!property) return <div className="text-center text-white py-20">Loading...</div>;
 
   return (
-    <div className="bg-[#17120F] text-white">
+    <div className="bg-[#17120F] text-white font-inter">
       {/* Hero Section */}
       <div
         className="relative h-[60vh] bg-cover bg-center"

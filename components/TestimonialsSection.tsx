@@ -53,7 +53,7 @@ const renderStars = (rating: number) => {
 
 const TestimonialsSection = React.forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} className="py-16 bg-[#17120F] text-white" id="testimonials">
+    <section ref={ref} className="w-10/12 mx-auto py-16 bg-[#17120F] text-white font-inter" id="testimonials">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#9d6b53] mb-2">What Our Clients Say</h2>

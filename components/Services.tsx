@@ -74,7 +74,7 @@ const Services = React.forwardRef<HTMLElement>((_, ref) => {
   return (
     <section
       ref={ref}
-      className="relative bg-cover bg-center w-full min-h-screen py-20"
+      className="relative font-inter bg-cover bg-center w-full min-h-screen py-20"
       style={{
         backgroundImage: "url('/image-11.svg')",
       }}

@@ -43,7 +43,7 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose,  onCon
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-md  bg-opacity-60 p-4 overflow-auto"
+      className="fixed inset-0 z-50 flex items-center justify-center font-inter backdrop-blur-md  bg-opacity-60 p-4 overflow-auto"
       
     >
       <div className="relative bg-[#f7e9d5]  text-black rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-lg">

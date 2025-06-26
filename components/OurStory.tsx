@@ -1,14 +1,19 @@
 "use client";
 
 import React from "react";
-import { FaCheck } from "react-icons/fa";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 const OurStory = React.forwardRef<HTMLElement>((_, ref) => {
   return (
     <section
       ref={ref}
       id="about"
-      className="w-10/12 mx-auto py-10 md:py-16 bg-[#17120F] text-white"
+      className="font- w-10/12 mx-auto py-10 md:py-16 bg-[#17120F] text-white"
     >
       <div className="container  mx-auto px-4">
         <div className="flex flex-col gap-20 lg:flex-row ">

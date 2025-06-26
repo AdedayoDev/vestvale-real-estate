@@ -8,7 +8,7 @@ const Hero = React.forwardRef<HTMLElement>((_, ref) => {
   return (
     <section
       ref={ref}
-      className="relative bg-cover bg-center text-white py-20 md:py-32"
+      className="relative font-inter bg-cover bg-center text-white py-20 md:py-32"
       style={{
         backgroundImage: 'url("/image-3.svg")',
         height: "100vh",

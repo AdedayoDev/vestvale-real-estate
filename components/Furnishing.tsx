@@ -62,7 +62,7 @@ const HomeDecorSection = React.forwardRef<HTMLElement>((_, ref) => {
     <section
       ref={ref}
       id="appliances"
-      className="py-16 bg-white bg-cover bg-center"
+      className="py-16 bg-white bg-cover bg-center font-inter"
       style={{
         backgroundImage:
           "url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1170&q=80')",
